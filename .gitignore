@@ -1,0 +1,4 @@
+/vendor/
+/config/bootstrap.json
+/config/email.json
+/.idea/
