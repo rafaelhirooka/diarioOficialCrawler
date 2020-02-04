@@ -1,0 +1,19 @@
+{
+    "name": "rafaelhirookasgobin/diario-oficial-crawler",
+    "description": "Crawler to scan brazilian Diario Oficial",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Hirooka",
+            "email": "rafaelhirooka@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
