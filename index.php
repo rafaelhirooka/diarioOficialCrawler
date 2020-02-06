@@ -7,12 +7,12 @@ $mailJson = __DIR__ . '/config/email.json';
 $bootstrap = json_decode(file_get_contents($bootstrapJson));
 $mailConfig = json_decode(file_get_contents($mailJson));
 
-$bootstrap->haystack = str_replace('{urlEncode}', urlencode($bootstrap->needle), $bootstrap->haystack);
-$bootstrap->haystack = str_replace('{urlRawEncode}', rawurlencode($bootstrap->needle), $bootstrap->haystack);
+$haystack = str_replace('{urlEncode}', urlencode($bootstrap->needle), $bootstrap->haystack);
+$haystack = str_replace('{urlRawEncode}', rawurlencode($bootstrap->needle), $haystack);
 
 $lastModification = isset($bootstrap->lastModification) ? DateTime::createFromFormat('Y-m-d', $bootstrap->lastModification) : new DateTime();
 
-$crawler = new App\Crawler($bootstrap->haystack, new \DOMDocument('1.0'));
+$crawler = new App\Crawler($haystack, new \DOMDocument('1.0'));
 $crawler->run();
 $crawlerDate = new DateTime();
 $crawler->lastModification($crawlerDate, $result);
