@@ -4,9 +4,9 @@ namespace App;
 
 class Crawler
 {
-    protected string $url;
-    protected array $uriCompose;
-    protected \DOMDocument $dom;
+    protected $url;
+    protected $uriCompose;
+    protected $dom;
 
     public function __construct(string $url, \DOMDocument $dom)
     {

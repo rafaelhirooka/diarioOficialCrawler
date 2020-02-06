@@ -9,17 +9,17 @@ use PHPMailer\PHPMailer\Exception;
 
 class Email
 {
-    private string $host;
-    private int $port;
-    private string $security = 'tls';
-    private string $username;
-    private string $password;
-    private string $from;
-    private string $to;
-    private PHPMailer $mailer;
-    private string $body;
-    private bool $isHtml = true;
-    private string $subject;
+    private $host;
+    private $port;
+    private $security = 'tls';
+    private $username;
+    private $password;
+    private $from;
+    private $to;
+    private $mailer;
+    private $body;
+    private $isHtml = true;
+    private $subject;
 
     public function __construct(PHPMailer $mailer)
     {
