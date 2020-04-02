@@ -17,8 +17,8 @@ $crawler->run();
 $crawlerDate = new DateTime();
 $crawler->lastModification($crawlerDate, $result);
 
-// If has modification
-if ($crawlerDate > $lastModification) {
+// If has modification and it's a valid link
+if ($crawlerDate > $lastModification && $result != NULL && filter_var($result, FILTER_VALIDATE_URL) !== FALSE) {
     // send email with result as att
     try {
         $mail = new \App\Email(new \PHPMailer\PHPMailer\PHPMailer(true));
